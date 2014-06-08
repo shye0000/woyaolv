@@ -1,0 +1,388 @@
+{% extends "base.html" %}
+{% block cssjs %}
+<link rel="stylesheet" href="/css/wookmark/reset.css">
+
+   Global CSS for the page and tiles -->
+  <link rel="stylesheet" href="/css/wookmark/main.css">
+
+  <!-- Specific CSS for the tiles -->
+  <link rel="stylesheet" href="/css/wookmark/style.css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  <!--<link rel="stylesheet" href="/css/nav.css" type="text/css" />-->    
+  <link rel="stylesheet" href="/css/button.css" type="text/css" /> 
+  <style type="text/css">
+  #demoDiv1{ 
+      position: fixed;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 0px;
+      height: 100%; 
+      width: 100%;
+      /*text-align: center; */
+      font-family: Arial, Helvetica, sans-serif; 
+      font-weight: bold; 
+      font-size: 36px; 
+      line-height: 500px;  
+    }
+  .find{
+    position: fixed;
+    width:150px;
+    top: 100px;
+    left: 17%; 
+  }
+  .description{
+    display: inline-block;  
+    zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */  
+    *display: inline;  
+    vertical-align: baseline;     
+    text-align: center;  
+    text-decoration: none;  
+    font: 14px/100% Arial, Helvetica, sans-serif;  
+    padding: .5em 2em .55em;  
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);  
+    -webkit-border-radius: .5em;   
+    -moz-border-radius: .5em;  
+    border-radius: .5em;  
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);  
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);  
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    width:190;
+    border: solid 1px #555;
+    background: #6e6e6e;  
+    opacity:0.8;
+    left: 5%;
+    top: 100px;
+    font: 12px/100% Arial, Helvetica, sans-serif;  
+    color: white;
+  }
+
+  .module{
+    position:relative;
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 360px;
+    margin-bottom: 50px;
+    height:auto;
+
+  }
+  #findfriends{  
+  }
+  #findproposes{
+  }
+  </style>
+  <script type="text/javascript" src="/script/jquery-1.5.1.min.js"></script>
+  <script type="text/javascript" src="/script/jquery.js"></script>
+  <script type="text/javascript" src="/script/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="/script/script.js">  </script>
+  <script type="text/javascript" src="/script/jquery-bp.js" ></script>
+  <!--<script type="text/javascript" src="/script/navigation.js" ></script>-->
+  <script type="text/javascript" src="/script/jquery.MyFloatingBg.js"></script>
+
+
+  <!-- Include the imagesLoaded plug-in -->
+  <script src="/script/wookmark/jquery.imagesloaded.js"></script>
+
+  <!-- Include the plug-in -->
+  <script src="/script/wookmark/jquery.wookmark.js"></script>
+
+  <!-- Once the page is loaded, initalize the plug-in. -->
+  <script type="text/javascript">
+    (function ($){
+      
+      $('#tiles').imagesLoaded(function() {
+        // Prepare layout options.
+        var options = {
+          autoResize: true, // This will auto-update the layout when the browser window is resized.
+          container: $('#main'), // Optional, used for some extra CSS styling
+          offset: 2, // Optional, the distance between grid items
+          itemWidth: 210, // Optional, the width of a grid item
+          fillEmptySpace: false // Optional, fill the bottom of each column with widths of flexible height
+        };
+        function applyLayout() {
+          $('#tiles').imagesLoaded(function() {
+            // Destroy the old handler
+            if (handler.wookmarkInstance) {
+              handler.wookmarkInstance.clear();
+            }
+
+            // Create a new layout handler.
+            handler = $('#tiles li');
+            handler.wookmark(options);
+          });
+        }
+        function onScroll(event) {
+          // Check if we're within 100 pixels of the bottom edge of the broser window.
+          var winHeight = window.innerHeight ? window.innerHeight : $(window).height(); // iphone fix
+          var closeToBottom = ($(window).scrollTop() + winHeight > $(document).height() - 100);
+
+          if (closeToBottom) {
+            // Get the first then items from the grid, clone them, and add them to the bottom of the grid.
+            var items = $('#tiles li'),
+                firstTen = items.slice(0, 10);
+            $('#tiles').append(firstTen.clone());
+
+            applyLayout();
+          }
+        };
+        $(window).bind('scroll', onScroll);
+
+        // Call the layout function.
+        handler = $('#tiles li');
+        handler.wookmark(options);
+
+        // Get a reference to your grid items.
+        var handler = $('#tiles li'),
+            filters = $('#filters li');
+
+        // Call the layout function.
+        handler.wookmark(options);
+
+        /**
+         * When a filter is clicked, toggle it's active state and refresh.
+         */
+        var onClickFilter = function(event) {
+          var item = $(event.currentTarget),
+              activeFilters = [];
+          item.toggleClass('active');
+
+          // Collect active filter strings
+          filters.filter('.active').each(function() {
+            activeFilters.push($(this).data('filter'));
+          });
+
+          handler.wookmarkInstance.filter(activeFilters, 'and');
+        }
+
+        // Capture filter click events.
+        filters.click(onClickFilter);
+
+
+
+      });
+    })(jQuery);
+  </script> 
+    <script type="text/javascript">
+    $(document).ready(function(){
+    //weather
+    $("#demoDiv1").MyFloatingBg({direction:-1});
+
+
+    });
+
+
+  </script>
+
+  
+{% endblock %}
+{% block wf %}
+  <div id="demoDiv1" bg="/images/fw2.jpg" class="m">
+      <!--<div style="color:#fff">
+          7 billion friends
+      </div>-->
+  </div> 
+{% endblock %}
+{% block content %}
+                <a href="">
+                    <div id="abs" class="bigbox">
+                      <div class="bigboxgrid " style="background:#8F2145">  
+                          <div class="content" style="background:#8F2145">
+                           
+                            <div id="showpic" width="160px" height="407px"></div>
+                            </div>              
+                           <h3>广告位</h3>
+                           
+                      </div>            
+                  </div>
+                </a>
+
+                <a href="planfix">
+                    <div id="bigbox" class="bigbox">
+                      <div class="bigboxgrid " style="background:#8F2145">                
+                           <h3>推荐旅行</h3>
+                           <div class="content" style="background:#8F2145">
+                           
+                            <div id="showpic" width="160px" height="407px"></div>
+                            </div>
+                      </div>            
+                  </div>
+                </a>
+  <div class="find">
+    <div id="findfriendbutton" class="button bigrounded rosy" onclick="var friend=document.getElementById('findfriends');var propose=document.getElementById('findproposes');
+                                              (friend.style.display=='')?(friend.style.display=''):(friend.style.display='');
+                                              propose.style.display='none';">
+      <span>看注册驴友</span>
+    </div><br/>
+    <div class="description">
+       <span>点这里找驴友，和他们一起旅行吧</span>
+    </div><br/><br/>
+      <ol id="filters">
+      <li data-filter="m">男孩</li>
+      <li data-filter="f">女孩</li>
+      <li data-filter="<18"><18岁</li>
+      <li data-filter="18-30">18岁-30岁</li>
+      <li data-filter="30-50">30岁-50岁</li>
+      <li data-filter=">50">>50岁</li>
+      <li data-filter="student">上学的</li>
+      <li data-filter="work">工作的</li>
+      </ol>
+    <br/><br/>
+    <div  class="button bigrounded rosy" onclick="var friend=document.getElementById('findfriends');var propose=document.getElementById('findproposes');
+                                              (propose.style.display=='')?(propose.style.display=''):(propose.style.display='');
+                                              friend.style.display='none';">
+
+      <span>看旅行倡议</span>
+    </div><br/>
+    <div class="description">
+      <span>点这里查查看驴友发起的旅行倡议，如果你感兴趣就申请加入哦</span>
+    </div><br/><br/>
+      <ol id="filters">
+      <li data-filter="m">paris</li>
+      <li data-filter="f">france sud</li>
+      <li data-filter="18-30">france east</li>
+      <li data-filter="30-50">france ouest</li>
+      <li data-filter="student">hbl</li>
+      <li data-filter="work">in one month</li>
+      <li data-filter="work">in one month</li>
+      </ol>
+  </div>
+    <div class="module" id="findfriends">
+
+    <div id="main" role="main">
+
+      <ul id="tiles">
+       
+        <li data-filter-class='["f", "18-30","student"]'>
+          <img src="/images/image_1.jpg" height="283" width="200">
+          <p>fyuan 女孩 23岁 上学的</p>
+        </li>
+        <li data-filter-class='["f", "30-50","work"]'>
+          <img src="/images/image_2.jpg" height="300" width="200">
+          <p>skyop 女孩 36岁 工作的</p>
+        </li>
+        <li data-filter-class='["m","18-30","work"]'>
+          <img src="/images/image_3.jpg" height="252" width="200">
+          <p>shye0000 男孩 25岁 工作的</p>
+        </li>
+        <li data-filter-class='["f", "18-30","student"]'>
+          <img src="/images/image_4.jpg" height="158" width="200">
+          <p>foljiu 女孩 19岁 上学的</p>
+        </li>
+        <li data-filter-class='["m","18-30","student"]'>
+          <img src="/images/image_5.jpg" height="300" width="200">
+          <p>zapaka 男孩 18岁 上学的</p>
+        </li>
+        <li data-filter-class='["f", "18-30","student"]'>
+          <img src="/images/image_6.jpg" height="297" width="200">
+          <p>lilian 女孩 20岁 上学的</p>
+        </li>
+        <li data-filter-class='["m","18-30","work"]'>
+          <img src="/images/image_7.jpg" height="200" width="200">
+          <p>glofwe 男孩 29岁 工作的</p>
+        </li>
+        <li data-filter-class='["f", "18-30","student"]'>
+          <img src="/images/image_8.jpg" height="200" width="200">
+          <p>nanima 女孩 21岁 上学的</p>
+        </li>
+        <li data-filter-class='["m","18-30","student"]'>
+          <img src="/images/image_9.jpg" height="398" width="200">
+          <p>goliery 男孩 25岁 上学的</p>
+        </li>
+        <li data-filter-class='["f", "30-50","work"]'>
+          <img src="/images/image_10.jpg" height="267" width="200">
+          <p>piupiu 女孩 40岁 工作的</p>
+        </li>
+        <li data-filter-class='["f", "30-50","work"]'>
+          <img src="/images/image_1.jpg" height="283" width="200">
+          <p>jilian 女孩 36岁 工作的</p>
+        </li>
+        <li data-filter-class='["m","18-30","student"]'>
+          <img src="/images/image_2.jpg" height="300" width="200">
+          <p>floreeeee 男孩 21岁 上学的</p>
+        </li>
+        <li data-filter-class='["m","30-50","work"]'>
+          <img src="/images/image_3.jpg" height="252" width="200">
+          <p>naniman 男孩 40岁 工作的</p>
+        </li>
+        <li data-filter-class='["m","30-50","work"]'>
+          <img src="/images/image_4.jpg" height="158" width="200">
+          <p>koollll 男孩 36岁 工作的</p>
+        </li>
+        <li data-filter-class='["m","18-30","student"]'>
+          <img src="/images/image_5.jpg" height="300" width="200">
+          <p>mooooon 男孩 20岁 上学的</p>
+        </li>
+        <li data-filter-class='["m","18-30","work"]'>
+          <img src="/images/image_6.jpg" height="297" width="200">
+          <p>gloooooobe 男孩 26岁 工作的</p>
+        </li>
+        <li data-filter-class='["f", "18-30","student"]'>
+          <img src="/images/image_7.jpg" height="200" width="200">
+          <p>blinggg 女孩 18岁 上学的</p>
+        </li>
+        <li data-filter-class='["m","18-30","student"'>
+          <img src="/images/image_8.jpg" height="200" width="200">
+          <p>bibibig 男孩 29岁 上学的</p>
+        </li>
+        <li data-filter-class='["m","30-50","work"]'>
+          <img src="/images/image_9.jpg" height="398" width="200">
+          <p>laolaolao 男孩 30岁 工作的</p>
+        </li>
+        <li data-filter-class='["m","18-30","student"]'>
+          <img src="/images/image_10.jpg" height="267" width="200">
+          <p>fouououl 男孩 27岁 上学的</p>
+        </li>
+        <li data-filter-class='["f", "18-30","student"]'>
+          <img src="/images/image_1.jpg" height="283" width="200">
+          <p>shrimmmmmp 女孩 20岁 上学的</p>
+        </li>
+        <li data-filter-class='["m","18-30","work"]'>
+          <img src="/images/image_2.jpg" height="300" width="200">
+          <p>peachlover 男孩 24岁 工作的</p>
+        </li>
+        <li data-filter-class='["f", "18-30","student"]'>
+          <img src="/images/image_3.jpg" height="252" width="200">
+          <p>peeeeeeach 女孩 23岁 上学的</p>
+        </li>
+        <li data-filter-class='["m","18-30","student"]'>
+          <img src="/images/image_4.jpg" height="158" width="200">
+          <p>bigboom 男孩 27岁 上学的</p>
+        </li>
+        <li data-filter-class='["m","18-30","work"]'>
+          <img src="/images/image_5.jpg" height="300" width="200">
+          <p>lalalalalalarge 男孩 29岁 工作的</p>
+        </li>
+        <li data-filter-class='["f", "30-50","work"]'>
+          <img src="/images/image_6.jpg" height="297" width="200">
+          <p>skkiinnyy 女孩 32岁 工作的</p>
+        </li>
+        <li data-filter-class='["m","30-50","work"]'>
+          <img src="/images/image_7.jpg" height="200" width="200">
+          <p>flllllyy 男孩 45岁 工作的</p>
+        </li>
+        <li data-filter-class='["f", "18-30","student"]'>
+          <img src="/images/image_8.jpg" height="200" width="200">
+          <p>goaaaaaah 女孩 20岁 上学的</p>
+        </li>
+        <li data-filter-class='["m","18-30","student"]'>
+          <img src="/images/image_9.jpg" height="398" width="200">
+          <p>moannnne 男孩 22岁 上学的</p>
+        </li>
+        <li data-filter-class='["m","18-30","work"]'>
+          <img src="/images/image_10.jpg" height="267" width="200">
+          <p>kkinnnnddde 男孩 28岁 工作的</p>
+        </li>
+        
+      </ul>
+
+    </div>
+      
+    </div>
+    <div class="module" id="findproposes">
+      sdffffffffffffffffffffffffffffffffffffff
+      sdffffffffffffffffffffffffffffffffff
+      sdfffffffffffffffffffffffffffffff
+      dsfffffffffffffffffffffffffffffffffffffffff
+      dsfffffffffffffffffffffffffffffffffffffff
+    </div> 
+{% endblock %}    

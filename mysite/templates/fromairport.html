@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block cssjs %}
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+   <!-- <link type="text/css" rel="stylesheet" href="/css/reveal.css" />
+    <link type="text/css" rel="stylesheet" href="/css/infogridstyle.css" />  
+    <link rel="stylesheet" href="/css/form_toairport.css" type="text/css" />-->   
+    <script type="text/javascript" src="/script/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript" src="/script/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/script/script.js">  </script>
+    <script type="text/javascript" src="/script/jquery-bp.js" ></script>
+    <script type="text/javascript" src="/script/infogrid.js" ></script> 
+    <script type="text/javascript" src="/script/jquery.MyFloatingBg.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    //weather
+    $("#demoDiv1").MyFloatingBg({direction:-1});
+    //$("#demoDiv2").MyFloatingBg({direction:0, speed:50});
+    });
+  </script>
+    <script type="text/javascript">
+        function CommentSent()
+        {
+            alert("You successfully pressed the button :)");
+        }
+    </script>
+  <style type="text/css">
+  #demoDiv1{  
+      position: fixed;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 20px;
+      height: 100%; 
+      width: 100%;
+      text-align: center; 
+      font-family: Arial, Helvetica, sans-serif; 
+      font-weight: bold; 
+      font-size: 36px; 
+      line-height: 500px; 
+
+    }
+  </style>
+  {% endblock %}
+{% block wf %}
+  <div id="demoDiv1" bg="/images/fw2.jpg" class="m">
+      <!--<div style="color:#fff">
+          7 billion friends
+      </div>-->
+  </div> 
+{% endblock %}
+{% block content %}
+    <div class="info">
+    <h1>我要 <span>被接机</span></h1>
+    </div>
+                <a href="#">
+                    <div id="abs" class="bigbox">
+                      <div class="bigboxgrid " style="background:#8F2145">  
+                          <div class="content" style="background:#8F2145">
+                           
+                            <div id="showpic" width="160px" height="407px"></div>
+                            </div>              
+                           <h3>广告位</h3>
+                           
+                      </div>            
+                  </div>
+                </a>
+
+                <a href="planfix">
+                    <div id="bigbox" class="bigbox">
+                      <div class="bigboxgrid " style="background:#8F2145">                
+                           <h3>推荐旅行</h3>
+                           <div class="content" style="background:#8F2145">
+                           
+                            <div id="showpic" width="160px" height="407px"></div>
+                            </div>
+                      </div>            
+                  </div>
+                </a> 
+
+    
+    <div class="commentForm" id="commentForm">
+        <div id="field1">
+        <label class="nameField" for="nameField">姓名</label><br/><br/><br/>
+        <input type="text" id="nameField" class="nameField" />
+        <label class="phoneField" for="phoneField">电话</label><br/><br/><br/>
+        <input type="text" id="phoneField" class="phoneField" />
+        <label class="numPerson" for="numPerson">人数</label><br/><br/><br/>
+        <input type="text" id="numPerson" class="numPerson" />
+        <label class="numLuggage" for="numLuggage">行李数</label><br/><br/><br/>
+        <input type="text" id="numLuggage" class="numLuggage" />
+        <label class="date" for="date">日期</label><br/><br/><br/>
+        <input type="text" id="date" class="date" onclick="return showCalendar('startTime', 'y-mm-dd');"/>
+        <label class="time" for="time">时间</label><br/><br/><br/>
+        <input type="text" id="time" class="time" />
+        <label class="airport" for="airport">机场</label><br/><br/><br/>
+        <input type="text" id="airport" class="airport" />
+        <label class="numFlight" for="numFlight">航班号</label><br/><br/><br/>
+        <input type="text" id="numFlight" class="numFlight" />
+        </div>
+        <div id="field2">
+        <label class="address" for="address">目的地</label><br/><br/><br/>
+        <textarea id="address" class="address" cols="10" rows="5"></textarea>
+        <label class="commentField" for="commentField">备注</label><br/><br/><br/>
+        <textarea id="commentField" class="commentField" cols="10" rows="5"></textarea>
+        </div>
+        <input type="submit" id="sendButton" value="Send" class="sendButton" onclick="CommentSent()" />
+        <img class="stamp" id="stamp" src="/images/stamp_red.png"/>
+    </div>
+{% endblock %}     

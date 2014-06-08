@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% block cssjs %}
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/css/nav.css" type="text/css" />    
+    <script type="text/javascript" src="/script/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript" src="/script/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="/script/script.js">  </script>
+  <script type="text/javascript" src="/script/jquery-bp.js" ></script>
+  <!--<script type="text/javascript" src="/script/navigation.js" ></script>-->
+  <script type="text/javascript" src="/script/jquery.MyFloatingBg.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+    //weather
+    $("#demoDiv1").MyFloatingBg({direction:-1});
+    //$("#demoDiv2").MyFloatingBg({direction:0, speed:50});
+    });
+  </script>
+
+  <style type="text/css">
+  #demoDiv1{  
+      position: fixed;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 0px;
+      height: 100%; 
+      width: 100%;
+      text-align: center; 
+      font-family: Arial, Helvetica, sans-serif; 
+      font-weight: bold; 
+      font-size: 36px; 
+      line-height: 500px; 
+
+    }
+  </style>
+{% endblock %}
+{% block wf %}
+
+  <div id="demoDiv1" bg="/images/fw2.jpg" class="m">
+
+  </div> 
+{% endblock %}
+{% block content %}
+
+    
+      <div class="info">
+              <h1>告诉我们<span>您要啥</span></h1>
+      </div>
+
+                <a href="">
+                    <div id="abs" class="bigbox">
+                      <div class="bigboxgrid " style="background:#8F2145">  
+                          <div class="content" style="background:#8F2145">
+                           
+                            <div id="showpic" width="160px" height="407px"></div>
+                            </div>              
+                           <h3>广告位</h3>
+                           
+                      </div>            
+                  </div>
+                </a>
+
+                <a href="planfix">
+                    <div id="bigbox" class="bigbox">
+                      <div class="bigboxgrid " style="background:#8F2145">                
+                           <h3>推荐旅行</h3>
+                           <div class="content" style="background:#8F2145">
+                           
+                            <div id="showpic" width="160px" height="407px"></div>
+                            </div>
+                      </div>            
+                  </div>
+                </a>
+      <div class="container container_index" id="page-wrap"> 		
+          
+
+          <div class="boxgridSet">
+                  <!--****************slidedown****************-->
+                  
+
+                  <a href="wanttravel">
+                    <div class="box slidedown">
+                      <div class="search" style="display:none">
+                          <!--<label>INPUT</label><input type="text" />-->
+                          <p>工作学习压力大，想出去转转吗？在这里您可以订制自己的专属线路或选择我们的固定线路并完成预订。但我们提供的并不止是这些，在这里您还可以发起旅行倡议，等待有缘人加入您的旅行，缘分从这里开始，羁绊在这里生根</p>
+                      </div>
+                      <div class="boxgrid ">                
+                           <h3>我要旅行&nbsp;&nbsp;<img src="/images/Right.png"/></h3>
+                           <div class="content">
+                           <p>发起旅行，定制路线</p>	
+                            <img src="/images/europe_map.jpg" width="300px" height="200px"/>
+                            </div>
+                      </div>            
+                  </div>
+                </a>
+                  <!--**************** slideright****************-->   
+                  <a href="seeproposetraveler">
+                    <div class="box slidedown"> 
+                      <div  class="search" style="display:none">
+                          <p>出去玩人少不热闹？想结识新朋友？或者一个人寂寞了？点这里看看其他人发起的旅行倡议，找找志同道合的ta们，您可以申请加入ta们的旅行，加对方为好友，缘分从这里开始，羁绊在这里生根</p>
+                      </div>
+                      <div class="boxgrid" style="background:#F781BE">          
+                          <h3>我要驴友&nbsp;&nbsp;<img src="/images/Right.png"/></h3>
+                          <div class="content" style="background:#F781BE">     
+                          <p>寻找旅伴<br/><a href="#/" target="_BLANK"></a></p>
+                          <img src="/images/govoyage.jpg" width="300px" height="200px"/>
+                          </div>
+                      </div>
+                  </div>
+                </a>
+                  
+                  <!--<div class="box right">
+                         <img id="target" src="/images/FILE - MOVIE.png" />
+                         <img id="coffee" src="/images/INTERNET EXPLORER - ALT.png" />
+                  </div>-->    
+
+                  <!--**************** thecombo****************-->   
+                  <a href="fromairport">
+                    <div class="box slidedown">
+                      <div  class="search" style="display:none">
+                      <p>终于大包小包下了飞机，人生地不熟不认路？挤地铁坐公交太受罪？点这里告诉我们，我们会竭诚为您服务，让您轻松到达目的地
+                      </p>
+                      </div>
+                      <div class="boxgrid" style="background:#39AB3E";>                 
+                          <h3>我要被接机&nbsp;&nbsp;<img src="/images/Right.png"/></h3>
+                          <div class="content" style="background:#39AB3E">
+                          <p>接机服务<br/><a href="#" target="_BLANK"></a></p>
+                          <img src="/images/pickup.jpeg" width="300px" height="200px"/>
+                          </div>
+                      </div>
+                  </div>
+                </a>
+
+                  <a href="toairport">
+                    <div class="box slidedown">
+                      <div  class="search" style="display:none">
+                      <p>要去机场吗？行李多不放便？告诉我们，我们代表了合理的价格和优质快捷的服务</p>
+                      </div>
+                      <div class="boxgrid" style="background:#B0EB17";>                 
+                          <h3>我要去机场&nbsp;&nbsp;<img src="/images/Right.png"/></h3>
+                          <div class="content" style="background:#B0EB17">
+                          <p>送机服务<br/><a href="#" target="_BLANK"></a></p>
+                          <img src="/images/airport.jpg" width="300px" height="200px"/>
+                          </div>
+                      </div>
+                  </div>
+                </a>
+
+                <a href="">
+                    <div class="box slidedown">
+                      <div  class="search" style="display:none">
+                      <p>搬家运货打豆豆，或者任何其他事情（违法的事不做哦），只要您需要车和司机，请点这里，浏览我们的加盟司机，联系他们，您需要的就是他们努力去完成的</p>
+                      </div>
+                      <div class="boxgrid" style="background:#FACC2E";>                 
+                          <h3>我要司机<img src="/images/Right.png"/></h3>
+                          <div class="content" style="background:#FACC2E">
+                          <p>我是游客<br/><a href="#" target="_BLANK"></a></p>
+                          <img src="/images/travel-tired.jpg" width="300px" height="200px"/>
+                          </div>
+                      </div>
+                  </div>
+                </a>
+
+                  <a href="">
+                    <div class="box slidedown">
+                      <div  class="search" style="display:none">
+                      <p>您是司机吗？您在欧洲有丰富的驾驶经验和真诚的服务意识吗？加入这个大家庭，我们一同成长，您不是一个人在努力。</p>
+                      </div>
+                      <div class="boxgrid" style="background:#A901DB";>                 
+                          <h3>我要接客&nbsp;&nbsp;<img src="/images/Right.png"/></h3>
+                          <div class="content" style="background:#A901DB">
+                          <p>我是司机<br/><a href="#" target="_BLANK"></a></p>
+                          <img src="/images/driver.jpg" width="300px" height="200px"/>
+                          </div>
+                      </div>
+                  </div>
+                </a>
+
+                  
+
+
+                  <!--**************** peek****************
+                  <div class="box">
+                      <div class="boxgrid peek" style="background:#8F2145">
+                          <a href="#"><img src="/images/birss.jpg"/></a>
+                          <a href="#"><img class="cover" src="/images/facebook.gif"/></a>
+                      </div>
+                  </div>-->
+             
+          </div>
+          
+          <div class="clear"></div>
+		      </div>	
+{% endblock %}
+        
+        

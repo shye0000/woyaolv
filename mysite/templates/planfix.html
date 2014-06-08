@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block cssjs %}
+<link href="/css/style.css" rel="stylesheet" type="text/css" />  
+  <link rel="stylesheet" type="text/css" href="/css/stylewanttravel.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="/css/calendar.css" />
+  <link type="text/css" rel="stylesheet" href="/css/reveal.css" />
+  <link type="text/css" rel="stylesheet" href="/css/infogridstyle.css" />
+  <link rel="stylesheet" type="text/css" href="/css/planfix.css" />
+  <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="/css/nav.css" type="text/css" /> 
+  <link rel="stylesheet" type="text/css" href="/css/button.css" /> 
+  <link rel="stylesheet" type="text/css" href="/css/picture.css" /> 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+  <script src="/script/jquery-1.2.6.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/script/wanttravel.jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+  <script type="text/javascript" src="/script/infogrid.js" ></script> 
+  <script type="text/javascript" src="/script/calendar.js" ></script>  
+  <script type="text/javascript" src="/script/calendar-zh.js" ></script>
+  <script type="text/javascript" src="/script/calendar-setup.js"></script>
+  <script type="text/javascript" src="/script/planfix.js"></script>
+  <script type="text/javascript" src="/script/jquery-1.5.1.min.js"></script>
+  <script type="text/javascript" src="/script/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="/script/script.js"></script>
+  <script type="text/javascript" src="/script/jquery.reveal.js"></script>
+  <script type="text/javascript" src="/script/jquery-bp.js" ></script>
+  <script type="text/javascript" src="/script/navigation.js" ></script>
+  <script type="text/javascript" src="/script/picture.js" ></script>
+
+  <script type="text/javascript">
+  window.onload=function()
+  {
+      var modalLocation = "start-info";
+    $('#'+modalLocation).reveal($(this).data());
+  }
+    
+  </script>
+{% endblock %}
+{% block content %}
+    <div class="info">
+  	<h1>我们的 <span>推荐旅行</span></h1>
+  	</div>
+    <div class="container">
+    <div id="content_wrapper">
+    
+        
+                    
+        <div id="ei_menu" class="ei_menu">
+					<ul>
+						<li>
+							<a href="#" class="pos1">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h2>圣米希尔山<br/><a href="#">点击看详情</a></h2>
+								<h3>￥10000</h3>
+								<p>被人冠以“世界第8大奇迹”的圣米歇尔山——天主教除了耶路撒冷和梵蒂冈之外的第三大圣地、法国前总统密特朗所说的“法国的泰山”。1000多年来，它傲然独立，凭海临风，睥睨大西洋海水的潮起潮落，接受着一代又一代信徒的顶礼膜拜。</p>
+								<p>不知是圣米歇尔山的名气让信徒们创造出与之相关的神话和传奇，抑或是神话和传奇使圣米歇尔山闻名于世，总之，圣米歇尔山千年历史就是一部厚厚传奇故事。</p>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pos2">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h2>普罗旺斯薰衣草<br/><a href="#">点击看详情</a></h2>
+								<h3>￥12000</h3>
+								<p>浪漫普罗旺斯,醉人薰衣草花海。普罗旺斯的薰衣草普罗旺斯位于法国南部,从诞生之日起,就谨慎地保守着她的秘密,直到英国人彼得·梅尔的到来,普罗旺斯许久以来独特生活风格的面纱才渐渐揭开。</p>
+								<p>在梅尔的笔下“普罗旺斯”已不再是一个单纯的地域名称,更代表了一种简单无忧、轻松慵懒的生活方式,一种宠辱不惊,看庭前花开花落;去留无意,望天上云卷云舒的闲适意境。如果旅行是为了摆脱生活的桎梏,普罗旺斯会让你忘掉一切。</p>
+							</div>
+
+						</li>
+						<li>
+							<a href="#" class="pos3">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h2>巴黎地区<br/><a href="paris">点击看详情</a></h2>
+								<h3>￥40000</h3>
+								<p>每个人的心中都有一座以幻想建造的巴黎，也许是《巴黎圣母院》的非典型浪漫，也许是《人间喜剧》的末世浮华。每个去过巴黎的人评价截然不同，有人说它冷漠，有人说它昂贵，有人说它混乱。但有一个词始终与巴黎脱不开干系，那就是：时尚。</p>
+								<p>巴黎在不同人的眼中呈现出不同的面貌，如果你想知道她会对你露出怎样的笑容，还是亲自去拜访她吧。</p>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pos4">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h2>尼斯<br/><a href="#">点击看详情</a></h2>
+								<h3>￥16000</h3>
+								<p>尼斯（Nice）是地中海沿岸法国南部港口城市，位于普罗旺斯-阿尔卑斯-蓝色海岸大区，为滨海阿尔卑斯省行政中心。尼斯地处马赛和意大利热那亚之间，为主要旅游中心和蔚蓝海岸地区的首选度假地。</p>
+								<p>尼斯全年气候宜人，冬暖夏凉，属于地中海性气候。在冬天很少有结冰的时候，几乎不下雪，有时在早春时节气温可以达到20 °C ，2007年3月2日最高气温达到26 °C。最适宜的旅游月份是五月和九月中到十月中。</p>
+
+								
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pos5">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h2>荷比卢三国<br/><a href="#">点击看详情</a></h2>
+								<h3>￥5000</h3>
+								<p>荷、比、卢这三国在历史与艺术上紧密联系，但却又各有风格。郁金香的国度“荷兰”、运河小城遍布的“比利时”及碉堡城墙构成的“卢森堡”，三国同游，可以让您尽情体验西欧风情。</p>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pos6">
+								<span class="ei_preview"></span>
+								<span class="ei_image"></span>
+							</a>
+							<div class="ei_descr">
+								<h2>卢瓦尔河谷<br/><a href="#">点击看详情</a></h2>
+								<h3>￥2000</h3>
+								<p>卢瓦河谷长280公里，面积为800平方公里，从2000年起，它成功注册成为联合国教科文组织世界文化和自然遗产地区。</p>
+								<p>作为文化和历史圣地，卢瓦尔河谷的景观，特别是它众多的文化古迹，表现了文艺复兴和启蒙时代西欧思想和创造方面的理想。同时，卢瓦尔河谷及其历史名城，如布洛瓦、希农、奥尔良、索米尔、图尔、南特和昂热，还以它们杰出的建筑遗产著称，特别是它们闻名世界的文化遗产地，如香波堡、舍农索城堡、昂布瓦兹王家城堡、维朗德里城堡的花园、克洛吕斯城堡、丰特莱王家修道院等等。</p>
+							</div>
+						</li>
+						
+						
+					</ul>
+		  </div>
+    
+    <!-- END Tabs (Example) -->
+    </div>
+</div>
+{% endblock %}

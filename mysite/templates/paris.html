@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% block cssjs %}
+<link href="/css/style.css" rel="stylesheet" type="text/css" />  
+  <link rel="stylesheet" type="text/css" href="/css/stylewanttravel.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="/css/calendar.css" />
+  <link type="text/css" rel="stylesheet" href="/css/reveal.css" />
+  <link type="text/css" rel="stylesheet" href="/css/infogridstyle.css" />
+  <link rel="stylesheet" type="text/css" href="/css/planfix.css" />
+  <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="/css/nav.css" type="text/css" /> 
+  <link rel="stylesheet" type="text/css" href="/css/button.css" /> 
+  <link rel="stylesheet" type="text/css" href="/css/picture.css" /> 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+  <script src="/script/jquery-1.2.6.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/script/wanttravel.jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+  <script type="text/javascript" src="/script/infogrid.js" ></script> 
+  <script type="text/javascript" src="/script/calendar.js" ></script>  
+  <script type="text/javascript" src="/script/calendar-zh.js" ></script>
+  <script type="text/javascript" src="/script/calendar-setup.js"></script>
+  <script type="text/javascript" src="/script/planfix.js"></script>
+  <script type="text/javascript" src="/script/jquery-1.5.1.min.js"></script>
+  <script type="text/javascript" src="/script/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="/script/script.js"></script>
+  <script type="text/javascript" src="/script/jquery.reveal.js"></script>
+  <script type="text/javascript" src="/script/jquery-bp.js" ></script>
+  <script type="text/javascript" src="/script/navigation.js" ></script>
+  <script type="text/javascript" src="/script/picture.js" ></script>
+
+  <script type="text/javascript">
+  window.onload=function()
+  {
+      var modalLocation = "start-info";
+    $('#'+modalLocation).reveal($(this).data());
+  }
+    
+  </script>
+{% endblock %}
+{% block content %}
+  	 <div class="info">
+  	<h1>推荐旅行 <span>巴黎篇</span></h1>
+  	</div>
+
+	<div class="container">
+    <div id="des-place">
+		<ul class=artist_l>
+  			<li class=a1>
+  				<a href="http://www.lanrentuku.com/" target=_blank>
+  					<img src="/images/eiffel.jpg" >
+  				</a>  
+  			</li>
+  			<li class=a2>
+  				<img src="/images/kxm.jpg"> 
+  				<a href="http://www.monuments-nationaux.fr/en/" target=_blank><strong>凯旋门</strong><br/><span>sdlkfjsdlkfjsldkfj</span><br/>查看详情</a> 
+  			</li>
+  			<li class=a3>
+  				<img src="/images/pompidou.jpg"> 
+  				<a href="http://www.lanrentuku.com/" target=_blank><strong>蓬皮杜艺术中心</strong><br/><span>即将有4场演出</span><br/>查看详情</a> 
+  			</li>
+  			<li class=a4>
+  				<img src="/images/metro.jpg"> 
+  				<a href="http://www.lanrentuku.com/" target=_blank><strong>地铁</strong><br/><span>即将有2场演出</span><br/>查看详情</a> 
+  			</li>
+  			<li class=a5>
+  				<img src="/images/art.jpg"> 
+  				<a href="http://www.lanrentuku.com/" target=_blank><strong>艺术氛围</strong><br/><span>即将有4场演出</span><br/>查看详情</a> 
+  			</li>
+  			<li class=a6>
+  				<img src="/images/moulinrouge.jpg"> 
+  				<a href="http://www.lanrentuku.com/" target=_blank><strong>红磨坊</strong><br/><span>即将有2场演出</span><br/>查看详情</a> 
+  			</li>
+  			<li class=a7>
+  				<img src="/images/build.jpg"> 
+  				<a href="http://www.lanrentuku.com/" target=_blank><strong>建筑</strong><br/><span>即将有6场演出</span><br/>查看详情</a> 
+  			</li>
+  			<li class=a8>
+  				<img src="/images/lovewall.png"> 
+  				<a href="http://www.lanrentuku.com/" target=_blank><strong>巴黎爱墙</strong><br/><span>即将有6场演出</span><br/>查看详情</a> 
+  			</li>
+  			<li class=a9>
+  				<img src="/images/louvre.jpg"> 
+  				<a href="http://www.lanrentuku.com/" target=_blank><strong>卢浮宫</strong><br/><span>即将有1场演出</span><br/>查看详情</a> 
+  			</li>
+  			<li class=a10>
+  				<img src="/images/bridge.jpg"> 
+  				<a href="http://www.lanrentuku.com/" target=_blank><strong>巴黎爱桥</strong><br/><span>即将有1场演出</span><br/>查看详情</a> 
+  			</li>
+  			<li class=a11>
+  				<img src="/images/disney.jpg"> 
+  				<a href="http://www.lanrentuku.com/" target=_blank><strong>迪士尼乐园</strong><br/><span>即将有1场演出</span><br/>查看详情</a> 
+  			</li>
+  			<li class=a12>
+  				<img src="/images/seine.jpg"> 
+  				<a href="http://www.lanrentuku.com/" target=_blank><strong>塞纳河畔</strong><br/><span>即将有6场演出</span><br/>查看详情</a> 
+  			</li>
+  		</ul>	
+    </div>
+
+	
+      <div id="planfix">
+        <div id="pagewrap">
+
+          <div class="info-col">
+
+            <h2>巴黎一日游</h2>
+
+            <a class="image parisone">View Image</a>
+
+            <dl> 
+                 <dt>包含景点</dt> <dd>1.巴黎圣母院2.红磨坊夜总会&nbsp;3.凯旋门&nbsp;4.大小皇宫&nbsp;5.卢浮宫&nbsp;6.香榭丽舍大街&nbsp;7.老佛爷百货&nbsp;8.奥赛博物馆&nbsp;9.波旁宫(国民议会)&nbsp;10.法兰西荣誉军团博物馆&nbsp;11.荣军院&nbsp;12.艾菲尔铁塔&nbsp;13.法国广播电台&nbsp;14.夏乐宫&nbsp;15.协和广场(方尖碑)&nbsp;16.巴黎市政厅&nbsp;17.巴黎古监狱&nbsp;18.立法大楼&nbsp;19.蓬皮杜国家文化艺术中心</dd> 
+                 <dt>住宿</dt> <dd>/</dd> 
+                 <dt>推荐季节</dt> <dd>全年</dd> 
+                 <dt>参考价格</dt> <dd>单人拼车: 80欧/人（2人发团）<br/>多人包车: 7座220欧/天, 9座240欧/天</dd> 
+                 <dt>备注</dt> <dd>含9小时工作时间<br/>含市内停车费<br/>不包含司机午餐<br/>不包含景点门票</dd> 
+                 <dt>我要去</dt> <dd><a class="button orange medium" href="#">感兴趣点这里</a></dd> 
+            </dl>
+
+          </div>
+
+          <div class="info-col">
+
+          <h2>巴黎周边一日游</h2>
+
+          <a class="image paristhree">View Image</a>
+
+          <dl>  
+            <dt>包含景点</dt> <dd>1.凡尔赛皇家宫殿<br/>2.枫丹白露皇家宫殿<br/>3.莫奈花园（莫奈故居）</dd>  
+            <dt>住宿</dt> <dd>/</dd> 
+            <dt>推荐季节</dt> <dd>全年</dd> 
+            <dt>参考价格</dt> <dd>1-2人拼团: 80欧/人/天<br/>3-8人包车: 7座240欧/天, 9座260欧/天</dd> 
+            <dt>备注</dt> <dd>含9小时工作时间<br/>含市内停车费<br/>不包含司机午餐<br/>不包含景点门票</dd>
+            <dt>我要去</dt> <dd><a class="button orange medium" href="#">感兴趣点这里</a></dd>
+
+          </dl>
+
+          </div>
+
+          <div class="info-col">
+
+          <h2>夜游巴黎</h2>
+
+          <a class="image loire">View Image</a>
+
+          <dl> 
+            <dt id="starter">包含景点</dt> <dd>1.埃菲尔铁塔<br/>2.凯旋门和香榭丽舍大街<br/>3.路易山大三世桥（黄金桥）<br/>4.塞纳河游船（船票价格20欧）<br/>5.协和广场夜景<br/>6.蒙帕纳斯大厦（巴黎最高建筑俯瞰整个巴黎）<br/>ps:夜游巴黎为以上任选3个景点。</dd>  
+            <dt>住宿</dt> <dd>/</dd> 
+            <dt>推荐季节</dt> <dd>全年</dd> 
+            <dt>参考价格</dt> <dd>2人拼团: 40欧/人(2人发团）<br/>3-8人包车: 110欧/7座，150欧/9座</dd> 
+            <dt>备注</dt> <dd>含4小时工作时间<br/>市内含停车费<br/>不含景点门票</dd>
+            <dt>我要去</dt> <dd><a class="button orange medium" href="#">感兴趣点这里</a><br/></dd>
+          </dl>
+
+          </div>
+
+          <div class="info-col">
+
+          <h2>激情红磨坊</h2>
+
+          <a class="image nice">View Image</a>
+
+          <dl> 
+            <dt>包含景点</dt> <dd>红磨坊激情夜总会</dd>  
+            <dt>住宿</dt> <dd>/</dd> 
+            <dt>推荐季节</dt> <dd>全年</dd> 
+            <dt>参考价格</dt> <dd>1人: 120欧/人(不含餐), 150欧/人(含餐)<br/>2-8人: 110欧/人(不含餐), 140欧/人(含餐)</dd> 
+            <dt>备注</dt> <dd>含酒店接送<br/>含红磨坊门票<br/>含市内停车费司机等待费</dd>
+            <dt>我要去</dt> <dd><a class="button orange medium" href="#">感兴趣点这里</a></dd>
+          </dl>
+
+          </div>
+        </div>
+      </div>
+</div>
+<div class="clear"></div>
+
+
+{% endblock %}

@@ -1,0 +1,362 @@
+{% extends "base.html" %}
+{% block cssjs %}
+<link href="/css/style.css" rel="stylesheet" type="text/css" />  
+  <link rel="stylesheet" type="text/css" href="/css/stylewanttravel.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="/css/calendar.css" />
+  <link type="text/css" rel="stylesheet" href="/css/reveal.css" />
+  <link type="text/css" rel="stylesheet" href="/css/infogridstyle.css" />
+  <link rel="stylesheet" type="text/css" href="/css/planfix.css" />
+  <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="/css/nav.css" type="text/css" /> 
+  <link rel="stylesheet" type="text/css" href="/css/button.css" /> 
+  <link rel="stylesheet" type="text/css" href="/css/picture.css" /> 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+  <script src="/script/jquery-1.2.6.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/script/wanttravel.jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+  <script type="text/javascript" src="/script/infogrid.js" ></script> 
+  <script type="text/javascript" src="/script/calendar.js" ></script>  
+  <script type="text/javascript" src="/script/calendar-zh.js" ></script>
+  <script type="text/javascript" src="/script/calendar-setup.js"></script>
+  <script type="text/javascript" src="/script/planfix.js"></script>
+  <script type="text/javascript" src="/script/jquery-1.5.1.min.js"></script>
+  <script type="text/javascript" src="/script/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="/script/script.js"></script>
+  <script type="text/javascript" src="/script/jquery.reveal.js"></script>
+  <script type="text/javascript" src="/script/jquery-bp.js" ></script>
+  <script type="text/javascript" src="/script/picture.js" ></script>
+  <script type="text/javascript" src="/script/jquery.MyFloatingBg.js"></script>
+   <script type="text/javascript">
+    $(document).ready(function(){
+    //weather
+    $("#demoDiv1").MyFloatingBg({direction:-1});
+    //$("#demoDiv2").MyFloatingBg({direction:0, speed:50});
+    });
+  </script>
+
+  <style type="text/css">
+  #demoDiv1{  
+      position: fixed;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 0px;
+      height: 100%; 
+      width: 100%;
+      text-align: center; 
+      font-family: Arial, Helvetica, sans-serif; 
+      font-weight: bold; 
+      font-size: 36px; 
+      line-height: 500px; 
+
+    }
+  </style>
+  <script type="text/javascript">
+  window.onload=function()
+  {
+      var modalLocation = "start-info";
+    $('#'+modalLocation).reveal($(this).data());
+  }
+    
+  </script>
+{% endblock %}
+{% block wf %}
+
+  <div id="demoDiv1" bg="/images/fw2.jpg" class="m">
+
+  </div> 
+{% endblock %}
+{% block content %}
+  	<div class="info">
+  	<h1>我要 <span>旅行</span></h1>
+  	</div>
+
+				<a href="">
+                    <div id="abs" class="bigbox">
+                      <div class="bigboxgrid " style="background:#8F2145">  
+                          <div class="content" style="background:#8F2145">
+                           
+                            <div id="showpic" width="160px" height="407px"></div>
+                            </div>              
+                           <h3>广告位</h3>
+                           
+                      </div>            
+                  </div>
+                </a>
+
+                <a href="planfix">
+                    <div id="bigbox" class="bigbox">
+                      <div class="bigboxgrid " style="background:#8F2145">                
+                           <h3>推荐旅行</h3>
+                           <div class="content" style="background:#8F2145">
+                           
+                            <div id="showpic" width="160px" height="407px"></div>
+                            </div>
+                      </div>            
+                  </div>
+                </a>
+
+	<div class="container" >
+		
+		
+		<!--<div id="form-bg">-->
+
+		<form action="#" method="post" id="wanttravel_form">
+
+			<fieldset class="wanttravel_form" id="step_1">
+			
+				<legend>基本信息</legend>
+			
+				<label for="num_all">
+					您想要几人一同旅行？
+				</label>
+				<select id="num_all">
+					<option id="opt_0" value="0">请选择</option>
+					<option id="opt_1" value="1">1</option>
+					<option id="opt_2" value="2">2</option>
+					<option id="opt_3" value="3">3</option>
+					<option id="opt_4" value="4">4</option>
+					<option id="opt_5" value="5">5</option>
+					<option id="opt_6" value="6">6</option>
+					<option id="opt_7" value="7">7</option>
+					<option id="opt_8" value="8">8</option>
+					<option id="opt_9" value="9">9</option>
+				</select>
+				<br/>
+				<label for="num_now">
+					您现在已经有几个人？
+				</label>
+				<select id="num_now">
+					<option id="opt_0" value="0">请选择</option>
+					<option id="opt_1" value="1">1</option>
+					<option id="opt_2" value="2">2</option>
+					<option id="opt_3" value="3">3</option>
+					<option id="opt_4" value="4">4</option>
+					<option id="opt_5" value="5">5</option>
+					<option id="opt_6" value="6">6</option>
+					<option id="opt_7" value="7">7</option>
+					<option id="opt_8" value="8">8</option>
+					<option id="opt_9" value="9">9</option>
+				</select>
+			
+				<br />
+			
+				<div id="attendee_1_wrap" class="name_wrap push">
+					<h3>请输入他们的姓名：</h3>
+				
+					<label for="name_attendee_1">
+						1:
+					</label>
+					<span>姓名</span><input type="text" id="name_attendee_1" class="input"></input>
+					<span>年龄</span><input type="text" id="age_attendee_1" class="input"></input>
+					<span>性别</span><input type="text" id="sex_attendee_1" class="input"></input>
+				</div>
+			<br/>
+				<div id="attendee_2_wrap" class="name_wrap">
+					<label for="name_attendee_2">
+						2:
+					</label>
+				  	<span>姓名</span><input type="text" id="name_attendee_2" class="input"></input>
+					<span>年龄</span><input type="text" id="age_attendee_2" class="input"></input>
+					<span>性别</span><input type="text" id="sex_attendee_2" class="input"></input>
+				</div>
+			<br/>
+				<div id="attendee_3_wrap" class="name_wrap">
+					<label for="name_attendee_3">
+						3:
+					</label>
+					<span>姓名</span><input type="text" id="name_attendee_3" class="input"></input>
+					<span>年龄</span><input type="text" id="age_attendee_3" class="input"></input>
+					<span>性别</span><input type="text" id="sex_attendee_3" class="input"></input>
+				</div>
+			<br/>
+				<div id="attendee_4_wrap" class="name_wrap">
+					<label for="name_attendee_4">
+						4:
+					</label>
+					<span>姓名</span><input type="text" id="name_attendee_4" class="input"></input>
+					<span>年龄</span><input type="text" id="age_attendee_4" class="input"></input>
+					<span>性别</span><input type="text" id="sex_attendee_4" class="input"></input>
+				</div>
+			<br/>
+				<div id="attendee_5_wrap" class="name_wrap">
+					<label for="name_attendee_5">
+						5:
+					</label>
+					<span>姓名</span><input type="text" id="name_attendee_5" class="input"></input>
+					<span>年龄</span><input type="text" id="age_attendee_5" class="input"></input>
+					<span>性别</span><input type="text" id="sex_attendee_5" class="input"></input>
+				</div>
+			<br/>
+				<div id="attendee_6_wrap" class="name_wrap">
+					<label for="name_attendee_6">
+						6:
+					</label>
+					<span>姓名</span><input type="text" id="name_attendee_6" class="input"></input>
+					<span>年龄</span><input type="text" id="age_attendee_6" class="input"></input>
+					<span>性别</span><input type="text" id="sex_attendee_6" class="input"></input>
+				</div>
+			<br/>
+				<div id="attendee_7_wrap" class="name_wrap">
+					<label for="name_attendee_7">
+						7:
+					</label>
+					<span>姓名</span><input type="text" id="name_attendee_7" class="input"></input>
+					<span>年龄</span><input type="text" id="age_attendee_7" class="input"></input>
+					<span>性别</span><input type="text" id="sex_attendee_7" class="input"></input>
+				</div>
+			<br/>
+				<div id="attendee_8_wrap" class="name_wrap">
+					<label for="name_attendee_8">
+						8:
+					</label>
+					<span>姓名</span><input type="text" id="name_attendee_8" class="input"></input>
+					<span>年龄</span><input type="text" id="age_attendee_8" class="input"></input>
+					<span>性别</span><input type="text" id="sex_attendee_8" class="input"></input>
+				</div>
+			<br/>
+				<div id="attendee_9_wrap" class="name_wrap">
+					<label for="name_attendee_9">
+						9:
+					</label>
+					<span>姓名</span><input type="text" id="name_attendee_9" class="input"></input>
+					<span>年龄</span><input type="text" id="age_attendee_9" class="input"></input>
+					<span>性别</span><input type="text" id="sex_attendee_9" class="input"></input>
+				</div>
+			
+			</fieldset>
+		<br/><br/><br/>
+			<fieldset id="step_2" disabled>
+			
+				<legend>旅行信息</legend>
+				
+				<label for="startTime">
+					开始日期：
+				</label>
+					<input type="text" id="startTime" name="startTime" onclick="return showCalendar('startTime', 'y-mm-dd');"  />
+				&nbsp;&nbsp;&nbsp;&nbsp;	
+				<label for="endTime">
+					结束日期：
+				</label>
+					<input type="text" id="endTime" name="endTime" onclick="return showCalendar('endTime', 'y-mm-dd');"  />
+				<br/>
+				<label for="travel_part">
+					您要去哪玩？
+				</label>
+				<select id="travel_part" name="travel_part">
+					<option id="opt_0" value="0">请选择</option>
+					<option id="opt_1" value="iledefrance">法国巴黎地区</option>
+					<option id="opt_2" value="east">法国东部</option>
+					<option id="opt_3" value="west">法国西部</option>
+					<option id="opt_4" value="south">法国南部</option>
+					<option id="opt_5" value="north">法国北部</option>
+					<option id="opt_6" value="europe">欧洲其他国家</option>
+				</select>
+				<br/>
+				<label for="travel_selfplan">
+					您大致的行程计划:
+				</label>
+				<a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">示例</a>
+				<textarea id="travel_selfplan" cols="100" rows="9"></textarea>
+				<br/>
+				<label for="travel_fixplan">
+					或选择我们推荐的线路:
+				</label>
+				<select id="travel_fixplan">
+					<option id="opt_0" value="0">请选择</option>
+					<option id="opt_1" value="iledefrance">巴黎一日游</option>
+					<option id="opt_2" value="east">巴黎三日游</option>
+					<option id="opt_3" value="west">卢瓦尔河三日游</option>
+					<option id="opt_4" value="south">尼斯深度两日游</option>
+					<option id="opt_5" value="north">荷比卢五日游</option>
+					<option id="opt_6" value="europe">德国四日游</option>
+				</select>
+				<a href="" class="big-link" data-reveal-id="planfix" data-animation="fade">了解一下</a>
+			</fieldset>
+		<br/><br/><br/>
+			<fieldset id="step_3" disabled>
+				<legend>完成订制</legend>
+				<label for="ok">
+					请您确认以上信息是否正确
+				</label>
+				<input type="checkbox" id="ok"></input>
+				<br/>
+				<input type="submit" id="submit_button" class="css_btn_class push" value="确认提交"></input>
+			</fieldset>
+		</form>
+	</div>
+	<!--</div>-->
+<div id="myModal" class="reveal-modal">
+			<h1>示例</h1>
+			<p>阿斯顿发松岛枫，阿斯顿发松岛枫。阿斯顿发松岛枫，阿斯顿发松岛枫。阿斯顿发松岛枫，阿斯达废物粉色发。阿斯顿发文发送到。阿撒旦法撒旦法是的。阿斯达发送到发送到。阿斯顿发射点发。阿斯蒂芬。阿斯顿发送到，阿斯顿发送到。阿斯顿发送到。</p>
+			<a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="planfix" class="reveal-modal xxlarge">
+	<h1>推荐线路</h1>
+
+
+<div class="info-col">
+
+<h2>巴黎一日游</h2>
+
+<a class="image parisone" href="http://jprart.deviantart.com/art/Batman-and-Superman-64545242">View Image</a>
+
+<dl> <dt>旅行路线</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>主要景点</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>餐饮娱乐</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>住宿</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>推荐季节</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>参考价格</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> </dl>
+
+</div>
+
+<div class="info-col">
+
+<h2>巴黎三日游</h2>
+
+<a class="image paristhree" href="http://jprart.deviantart.com/">View Image</a>
+
+<dl> <dt>旅行路线</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>主要景点</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>餐饮娱乐</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>住宿</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>推荐季节</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>参考价格</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> </dl>
+
+</div>
+
+<div class="info-col">
+
+<h2>卢瓦尔河三日游</h2>
+
+<a class="image loire" href="http://www.deviantart.com/print/8342014/">View Image</a>
+
+<dl> <dt id="starter">旅行路线</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>主要景点</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>餐饮娱乐</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>住宿</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>推荐季节</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>参考价格</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> </dl>
+
+</div>
+
+<div class="info-col">
+
+<h2>尼斯深度两日游</h2>
+
+<a class="image nice" href="http://eldelgado.deviantart.com/">View Image</a>
+
+<dl> <dt>旅行路线</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>主要景点</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>餐饮娱乐</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>住宿</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>推荐季节</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>参考价格</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> </dl>
+
+</div>
+
+<div class="info-col">
+
+<h2>荷比卢五日游</h2>
+
+<a class="image hbl" href="http://diablo2003.deviantart.com/">View Image</a>
+
+<dl> <dt>旅行路线</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>主要景点</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>餐饮娱乐</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>住宿</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>推荐季节</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> <dt>参考价格</dt> <dd>松岛枫空间来看大家地方地方地方地方地方大幅度说大法师打发斯蒂芬，是大法师的法。是大法师的法。</dd> </dl>
+
+</div>
+
+
+	<a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+<div id="start-info" class="reveal-modal">
+			<h1>您好</h1>
+			<p>欢迎您选择我要驴，下面即将开始我们的服务，在这里:
+				<br/>- 您需要填写基本的个人信息。
+				<br/>- 您可以订制专属自己的旅行路线或选择我们的推荐路线。
+				<br/>- 而且如果您的同行人数较少，您希望和更多的人一同旅行，在这个板块中您还可以发起旅行倡议，之后您的倡议信息将公布给其他网友，等待他们的加入。</p>
+			<a class="close-reveal-modal">&#215;</a>
+</div>
+{% endblock %}

@@ -1,0 +1,207 @@
+
+/*#form-bg{
+	position:relative;
+	width: 100%;
+	height: auto;
+	background-color: rgba(236,0,100,0.4);
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 200px;
+	/*margin-top: 50px;
+	text-align: center;*/
+/*}*/
+
+#wanttravel_form { 
+	position: relative;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	
+}
+
+.hidden {
+	position:absolute;
+	left:-999em;
+	top:-999em;
+	width:1%;
+}
+
+
+
+
+h3 { 
+	font-size: 18px; 
+	letter-spacing: -1px; 
+	margin: 0 0 5px 0; 
+}
+
+p, label { 
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 18px; 
+	margin: 4px 0;
+}	
+
+
+fieldset {
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    border: 1px solid #CCC;
+    position: relative;
+
+
+
+
+	width: 100%; 
+	padding: 15px; 
+	float: center; 
+	margin-left: auto;
+	margin-right: auto; 
+	}
+
+legend {
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    border: 1px solid #CCC;
+    position: relative;
+    font:26px "微软雅黑","幼圆",Arial, sans-serif;
+	color:#FFF; 
+	padding: 5px 100px; 
+	letter-spacing: -1px;
+}
+
+	fieldset#step_1 legend{ 
+		background: #147aac; 
+	}
+	fieldset#step_2 legend{ 
+		background: #147aac; 
+	}
+	fieldset#step_3 legend{ 
+		background: #147aac; 
+	}
+	fieldset#step_4 legend{ 
+		background: #147aac; 
+	}
+	fieldset#step_1{ 
+		background: #1999D7; 
+	}
+	fieldset#step_2{ 
+		background: #1999D7; 
+	}
+	fieldset#step_3{ 
+		background: #1999D7; 
+	}
+	fieldset#step_4{ 
+		background: #1999D7; 
+	}
+	fieldset#step_1 label,span{ 
+		margin: auto;
+		font:20px "微软雅黑","幼圆",Arial, sans-serif;
+		color:#FFF;
+	}
+	fieldset#step_2 label,span{  
+		font:20px "微软雅黑","幼圆",Arial, sans-serif;
+		color:#FFF;
+	}
+	fieldset#step_3 label,span{ 
+		font:20px "微软雅黑","幼圆",Arial, sans-serif;
+		color:#FFF;
+	}
+	fieldset#step_4 label,span{ 
+		font:20px "微软雅黑","幼圆",Arial, sans-serif;
+		color:#FFF;
+	}
+	fieldset#step_1 h3{ 
+		font:20px "微软雅黑","幼圆",Arial, sans-serif;
+		color:#FFF;
+	}
+
+#travel_selfplan{
+	width:100%;
+}
+
+								  	  
+option { 
+	padding: 0 5px; 
+}
+
+.name_wrap { 
+	margin: 5px 0; 
+	}
+	.name_wrap label { 
+		font-size: 12px; 
+		display: block; 
+		width: 102px; 
+		float: left; 
+	}
+	
+.push {
+	margin: 20px 0 0 0; 
+}
+
+#special_accommodations_wrap,
+#company_name_wrap { 
+	margin: 8px 0 0 0; 
+}
+
+#company_name_wrap label,
+#special_accommodations_wrap label { 
+	font-size: 12px; 
+}
+
+#special_accommodations_wrap textarea { 
+	width: 100%; 
+	height: 100px; 
+}
+.css_btn_class {
+	font:26px "微软雅黑","幼圆",Arial, sans-serif;
+	-moz-border-radius:16px;
+	-webkit-border-radius:16px;
+	border-radius:16px;
+	border:0px solid #337fed;
+	padding:14px 18px;
+	text-decoration:none;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(105%, #3d94f6), color-stop(0%, #1e62d0) );
+	background:-moz-linear-gradient( center top, #3d94f6 105%, #1e62d0 0% );
+	background:-ms-linear-gradient( top, #3d94f6 105%, #1e62d0 0% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+	background-color:#3d94f6;
+	color:#ffffff;
+	display:inline-block;
+ 	-webkit-box-shadow:inset 0px 0px 0px -50px #97c4fe;
+ 	-moz-box-shadow:inset 0px 0px 0px -50px #97c4fe;
+ 	box-shadow:inset 0px 0px 0px -50px #97c4fe;
+}.css_btn_class:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(105%, #1e62d0), color-stop(0%, #3d94f6) );
+	background:-moz-linear-gradient( center top, #1e62d0 105%, #3d94f6 0% );
+	background:-ms-linear-gradient( top, #1e62d0 105%, #3d94f6 0% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+	background-color:#1e62d0;
+}.css_btn_class:active {
+	position:relative;
+	top:1px;
+}
+
+.active_name_field{
+	width:100px;
+}

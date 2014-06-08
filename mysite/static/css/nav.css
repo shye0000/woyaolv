@@ -1,0 +1,70 @@
+
+#navigation{
+	height:60px;
+	margin-left: 550px;
+	margin-top: 0px;
+}
+#navigation a{
+	height:58px;
+	position:absolute;
+	width:97px;
+	float:left;
+}
+
+#home, #home div, 
+#about, #about div, 
+#services , #services div, 
+#solutions, #solutions div, 
+#contact,  #contact div {
+	height:58px;
+	position:absolute;
+	width:97px;
+	float:left;
+}
+
+#home, #about, #services, #solutions, #contact{
+	position: fixed;
+    display: block;
+	background-image: url(/images/nav.png);
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	top:0;
+}
+
+#home{
+	background-position: 0px -25px;
+	margin-left:6px;
+}
+
+#about{
+	background-position: -98px -25px;
+	margin-left:105px;
+}
+
+#services{
+	background-position: -196px -25px;
+	margin-left:204px;
+}
+
+#solutions{
+	background-position: -294px -25px;
+	margin-left:303px;
+}
+
+#contact{
+	background-position: -392px -25px;
+	margin-left:402px;
+}
+
+#home div, #about div, #services div, #solutions div, #contact div {
+	background-image: url(/images/white.png);
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: 0px -60px;	
+}	
+
+.pri-nav a{
+	display:block;
+	text-decoration:none;
+	text-indent:-30000px;
+}
